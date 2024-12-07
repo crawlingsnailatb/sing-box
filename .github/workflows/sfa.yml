@@ -60,6 +60,7 @@ jobs:
       - name: Sign SFA
         uses: PuerNya/sign-android-release@v2
         with:
+          buildToolsPath: /usr/local/lib/android/sdk/build-tools/29.0.3
           releaseDirectory: SFA/app/build/outputs/apk/release
           signingKeyBase64: ${{ secrets.SIGN_KEY }}
           alias: ${{ secrets.ALIAS }}
